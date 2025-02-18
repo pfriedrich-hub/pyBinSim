@@ -136,8 +136,9 @@ class BinSim(object):
                                   stream_callback=audio_callback(self))
         self.stream.start_stream()
 
-        while self.stream.is_active():
-            time.sleep(1)
+        # todo see if this works (need control over stream)
+        # while self.stream.is_active():
+        #     time.sleep(1)
 
     def initialize_pybinsim(self):
         self.result = np.empty([self.blockSize, 2], dtype=np.float32)

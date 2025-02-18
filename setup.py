@@ -27,7 +27,8 @@ setup(
     license='MIT',
     author='Annika Neidhardt, Florian Klein, Thomas Koellmer',
     author_email='thomas.koellmer@tu-ilmenau.de',
-    url='https://github.com/pyBinSim/pyBinSim',
+    # url='https://github.com/pyBinSim/pyBinSim',
+    url='https://github.com/pfriedrich-hub/pyBinSim',
     tests_require=['pytest'],
     cmdclass={'test': PyTest},
     install_requires=[
