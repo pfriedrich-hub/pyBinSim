@@ -134,7 +134,7 @@ class BinSim(object):
                                   rate=self.sampleRate, output=True,
                                   frames_per_buffer=self.blockSize,
                                   stream_callback=audio_callback(self))
-        self.stream.start_stream()
+        # self.stream.start_stream()
 
         # todo see if this works (need control over stream)
         # while self.stream.is_active():
@@ -255,7 +255,7 @@ def audio_callback(binsim):
         if np.max(np.abs(binsim.result)) > 1:
             binsim.log.warn('Clipping occurred: Adjust loudnessFactor!')
 
-        # When the last block is small than the blockSize, this is probably the end of the file.
+        # When the last block is smaller than the blockSize, this is probably the end of the file.
         # Call pyaudio to stop after this frame
         # Should not be the case for current soundhandler implementation
         if binsim.block.size < callback.config.get('blockSize'):
