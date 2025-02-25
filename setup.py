@@ -35,7 +35,7 @@ setup(
          "future == 0.16.0",
          "numpy",
          "ovr == 1.10.101",
-         "pyaudio == 0.2.10",
+         "pyaudio",
         "pyfftw",
          "pyserial == 3.2.1",
          "pytest == 3.0.5",
